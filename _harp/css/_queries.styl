@@ -1,0 +1,20 @@
+// breakpoints
+xs = 480
+sm = 620
+md = 768
+lg = 1170
+
+// media queries
+mq(screenwidth)
+   if screenwidth == xs
+      @media screen and (min-width: xs px)
+         {block}
+   else if screenwidth == sm
+      @media screen and (min-width: sm px)
+         {block}
+   else if screenwidth == md
+      @media screen and (min-width: md px)
+         {block}
+   else if screenwdith == lg
+      @media screen and (min-width: lg px)
+         {block}

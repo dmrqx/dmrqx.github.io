@@ -1,0 +1,117 @@
+@import '_mixins' // general use mixins
+@import '_queries' // media queries sizes and mixin
+
+*::selection
+  background #FFF4AC
+  color #3a3c3e
+
+body
+  margin 0
+  padding 20vmin 14vw 0
+  background #fafcfe
+  color #3a3c3e
+  font-family 'Lekton'
+  fontSize(18.5)
+
+p a
+  padding-bottom 2px
+  background #FFF4AC
+  border-bottom 1px solid #3a3c3e
+  color #3a3c3e
+  text-decoration none
+  outline 3px solid #FFF4AC
+  &:hover
+    border-bottom 2px solid #3a3c3e
+    font-weight 700
+
+.superlorem
+  position fixed
+  top -20vmin
+  left -4vmin
+  margin 0
+  padding 0
+  fontSize(250)
+  font-weight 700
+  letter-spacing 40px
+  line-height 1.2
+  opacity .025
+  overflow hidden
+  z-index -1
+
+header.main
+  display flex
+  justify-content space-between
+  align-items flex-end
+  margin-bottom 60px
+  padding-bottom 30px
+  border-bottom 1px dashed #caccce
+
+  h1
+    margin 0
+    padding 0
+    font-family 'Oswald'
+    fontSize(48)
+    letter-spacing 1px
+    line-height 1.2em
+    text-transform uppercase
+    &:after
+      content ''
+      display inline-block
+      margin-left 4px
+      width 6px
+      height 36px
+      background #3a3c3e
+      animation blink 2.275s steps(2, start) infinite
+    &[contenteditable="true"]:focus:after
+      display none
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+nav.main ul
+  margin 0
+
+  li
+    display inline-block
+    margin-left 10px
+    padding 4px 6px 0 10px
+    border 3px double #89FFB0
+    border-left-width 4px
+    &:first-child
+      margin-left 0
+
+    a
+      position relative
+      color #FA9189
+      letter-spacing 1px
+      text-decoration none
+      &:before
+        content ''
+        display inline-block
+        margin-right 12px
+        width 5px
+        height 13px
+        background transparent
+        outline 1px double #89FFB0
+        outline-offset 1px
+      &.selected,
+      &:hover
+        &:before
+          background #89FFB0
+
+footer.main
+  fontSize(16)
+  line-height 1.4
+
+  .dmrq-logo
+    width 120px
+
+// FA9189 FFF4AC 89FFB0 6872CC 756585
